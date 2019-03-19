@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".movieDetails.MovieDetailsFragment">
+
+
+        <ImageView
+            android:id="@+id/ImageView_movie_details_movie_backdrop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/textView_movie_details_movie_title"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:srcCompat="@tools:sample/avatars[0]" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/carView_movie_details_movie_poster"
+            android:layout_width="156dp"
+            android:layout_height="228dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="fitXY"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="2dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintBottom_toBottomOf="@+id/ImageView_movie_details_movie_backdrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImageView_movie_details_movie_backdrop"
+            tools:src="@tools:sample/avatars[9]">
+
+
+            <ImageView
+                android:id="@+id/ImageView_movie_details_movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@+id/ImageView_movie_details_movie_backdrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ImageView_movie_details_movie_backdrop"
+                tools:src="@tools:sample/avatars[9]" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/textView_movie_details_movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Dilwale Dulhania Le Jayenge"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView_movie_details_movie_vote_avrage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/carView_movie_details_movie_poster"
+            app:layout_constraintTop_toBottomOf="@+id/ImageView_movie_details_movie_backdrop" />
+
+        <TextView
+            android:id="@+id/textView_movie_details_movie_vote_avrage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/colorBrightOrange"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/chip_movie_details_movie_genre_one"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/carView_movie_details_movie_poster"
+            app:layout_constraintTop_toBottomOf="@+id/textView_movie_details_movie_title"
+            tools:text="-" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_movie_details_movie_genre_two"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Drama"
+            android:textColor="@color/colorWhite"
+            app:chipBackgroundColor="@color/colorEmerald"
+            app:layout_constraintBottom_toBottomOf="@+id/chip_movie_details_movie_genre_one"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chip_movie_details_movie_genre_one"
+            app:layout_constraintTop_toTopOf="@+id/chip_movie_details_movie_genre_one" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_movie_details_movie_genre_one"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Drama"
+            android:textColor="@color/colorWhite"
+            app:chipBackgroundColor="@color/colorEmerald"
+            app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintEnd_toStartOf="@+id/chip_movie_details_movie_genre_two"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/carView_movie_details_movie_poster"
+            app:layout_constraintTop_toBottomOf="@+id/textView_movie_details_movie_vote_avrage" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toTopOf="@+id/textView_movie_details_movie_overview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chip_movie_details_movie_genre_one" />
+
+
+
+
+            <TextView
+                android:id="@+id/textView_movie_details_movie_overview"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2"
+                android:lineSpacingExtra="8sp"
+                android:orientation="vertical"
+                android:text="A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people's ailments. When the cell block's head guard, Paul Edgecomb, recognizes Coffey's miraculous gift, he tries desperately to help stave off the condemned man's execution." />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

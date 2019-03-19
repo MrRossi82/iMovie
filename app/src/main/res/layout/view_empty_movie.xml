@@ -1,0 +1,56 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_empty_movie"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="32dp">
+
+
+    <ImageView
+        android:id="@+id/imageView_empty_list_movies"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toTopOf="@+id/textView_empty_list_movies_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_empty" />
+
+
+    <TextView
+        android:id="@+id/textView_empty_list_movies_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/list_message_empty_title"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Material.Title"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/textView_empty_list_movies_describe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_empty_list_movies" />
+
+    <TextView
+        android:id="@+id/textView_empty_list_movies_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginTop="16dp"
+        android:text="@string/list_message_empty_describe"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Material.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_empty_list_movies_title" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

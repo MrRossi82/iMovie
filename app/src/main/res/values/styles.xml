@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+
+
+
+    //// Typography Styles /////////
+
+    <style name="TextAppearance.Material" parent="@android:style/TextAppearance.Material">
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+
+    <style name="TextAppearance.Material.Headline" parent="@style/TextAppearance.Material">
+        <item name="android:textSize">@dimen/text_size_headline</item>
+    </style>
+
+    <style name="TextAppearance.Material.Title" parent="@style/TextAppearance.Material">
+        <item name="android:textSize">@dimen/text_size_title</item>
+    </style>
+
+
+    <style name="TextAppearance.Material.Body2" parent="@style/TextAppearance.Material">
+        <item name="android:textSize">@dimen/text_size_body2</item>
+    </style>
+
+
+    <style name="ListTheme" parent="AppTheme">
+        <item name="android:background">@color/colorWhiteSmoke</item>
+    </style>
+
+</resources>

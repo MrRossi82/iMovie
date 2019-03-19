@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_headline">28sp</dimen>
+    <dimen name="text_size_title">24sp</dimen>
+    <dimen name="text_size_body2">16sp</dimen>
+
+    <dimen name="header_height">160dp</dimen>
+
+
+</resources>
